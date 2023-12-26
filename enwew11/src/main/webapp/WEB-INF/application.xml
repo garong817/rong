@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+  <bean id="main" class="com.sist.model.MainModel"/>
+  <bean id="store" class="com.sist.model.StoreModel"/>
+  <bean id="gocamping" class="com.sist.model.GoCampingModel"/>
+</beans>
