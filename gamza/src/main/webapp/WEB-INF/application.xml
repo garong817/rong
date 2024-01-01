@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
   <bean id="main" class="com.sist.model.MainModel"></bean>
-  <bean id="store" class="com.sist.model.StoreModel"/>
-  <bean id="gocamping" class="com.sist.model.GoCampingModel"/>
-  <bean id="membership" class="com.sist.model.MemberModel"/>
+  <bean id="store" class="com.sist.model.StoreModel"></bean>
+  <bean id="gocamping" class="com.sist.model.GoCampingModel"></bean>
+  <bean id="member" class="com.sist.model.MemberModel"></bean>
 </beans>

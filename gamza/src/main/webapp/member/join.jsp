@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-    <!-- 회원가입 -->
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +34,7 @@ Shadowbox.init({
 	players:['iframe']
 })
 $(function(){
-	/*$('#joinBtn').on('click',function(){
+	$('#joinBtn').on('click',function(){
 		let id=$('#id').val();
 		if(id.trim()==="")
 		{
@@ -42,7 +42,7 @@ $(function(){
 			$('#id').focus();
 			return;
 		}
-	})*/
+	})
 	
 	$('#checkBtn').click(function(){
 		Shadowbox.open({

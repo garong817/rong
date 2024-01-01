@@ -69,12 +69,12 @@ $(function(){
             <div class="container topbar bg-primary d-none d-lg-block">
                 <div class="d-flex justify-content-between">
                     <div class="top-info ps-2">
-                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">경기도 뉴욕</a></small>
+                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">대한민국</a></small>
                         <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">barocamp@gmai.com</a></small>
                     </div>
                     <div class="top-link pe-2">
-                        <a href="#" class="text-white"><small class="text-white mx-2">로그인</small>/</a>
-                        <a href="../member/join.do" class="text-white"><small class="text-white mx-2">회원가입</small></a>
+                        <a href="../member/login_form.do" class="text-white"><small class="text-white mx-2">로그인</small>/</a>
+                        <a href="../member/join.jsp" class="text-white"><small class="text-white mx-2">회원가입</small></a>
                         <a href="#" class="text-white"><small class="text-white ms-2">고객센터</small></a>
                     </div>
                 </div>
