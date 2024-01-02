@@ -4,4 +4,5 @@
   <bean id="store" class="com.sist.model.StoreModel"></bean>
   <bean id="gocamping" class="com.sist.model.GoCampingModel"></bean>
   <bean id="member" class="com.sist.model.MemberModel"></bean>
+  <bean id="board"  class="com.sist.model.BoardModel"></bean>
 </beans>

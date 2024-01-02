@@ -14,7 +14,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import com.sist.controller.RequestMapping;
-import com.sist.dao.MemberDAO;
 import com.sist.vo.MemberVO;
 import com.sist.vo.ZipcodeVO;
 
@@ -23,7 +22,7 @@ public class MemberModel {
 public String membership_join(HttpServletRequest request,
 							  HttpServletResponse response)
 {
-	request.setAttribute("main_jsp", "../member_join.jsp");
+	request.setAttribute("main_jsp", "../member/join.jsp");
 	return "../main/main.jsp";
 }
 
@@ -51,7 +50,7 @@ public void member_idcheck_ok(HttpServletRequest request,
 	
 }
 
-	@RequestMapping("member_postfind.do")
+	@RequestMapping("member/postfind.do")
 	public String member_postfind(HttpServletRequest request,
 								HttpServletResponse response)
 	{

@@ -44,8 +44,6 @@
         <!-- Modal Search Start -->
         <jsp:include page="footer.jsp"></jsp:include>
         
-        <!-- <jsp:include page='../member/join.jsp'></jsp:include> -->
-        
 
 
         <!-- Copyright Start -->

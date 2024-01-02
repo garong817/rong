@@ -1,15 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="../shadow/css/shadowbox.css">
 <link rel="stylesheet" href="font.css">
+<link rel="stylesheet" href="../shadow/css/shadowbox.css">
 <style type="text/css">
 .container {
   border: 2px solid #B2EBF4; /* 실선 테두리, 선의 두께는 2px, 색상은 검정 (#000) */
@@ -34,16 +32,15 @@ Shadowbox.init({
 	players:['iframe']
 })
 $(function(){
-	$('#joinBtn').on('click',function(){
+	/*$('#joinBtn').on('click',function(){
 		let id=$('#id').val();
 		if(id.trim()==="")
 		{
 			alert("아이디 체크를 하세요!!");
-			$('#id').focus();
+	 		$('#id').focus();
 			return;
 		}
-	})
-	
+	})*/
 	$('#checkBtn').click(function(){
 		Shadowbox.open({
 			content:'../member/idcheck.do',
@@ -53,34 +50,32 @@ $(function(){
 			height:200
 		})
 	});
-	
 	$('#postBtn').click(function(){
 		Shadowbox.open({
 			content:'../member/postfind.do',
 			player:'iframe',
 			title:'우편번호 검색',
 			width:490,
-			height:350
 		})
 	})
 })
 </script>
 </head>
 <body>
-<div class="container">
-  <div class="jumbotron" style="background-image: url('../img/rr.png'); background-size: cover;">
+<div class="wrapper row3">
+ <main class="container clear">
+  <!-- <div class="jumbotron" style="background-image: url('../img/rr.png'); background-size: cover;"> -->
       <h2 class="text-center">회원가입을 위해<br>정보를 입력해주세요</h2>
       <p class="text-center">지금 바로 캠핑 가요 우리</p>
-    </div>
-    
     <div class="row row1"> 
+    <form method="post" action="../member/join_ok.do" name="frm">
       <table class="table">
      <tr>
       <th class="text-right" width="15%">ID</th>
       <td width="85%" class="inline">
        <input type="text" size=15 class="input-sm" 
           readonly name="id" id="id">
-       <input type="button" value="중복확인"
+       <input type="button" value="중복체크"
          class="btn-sm btn-danger" id="checkBtn">
       </td>
      </tr>
@@ -89,7 +84,7 @@ $(function(){
       <th class="text-right" width="15%">비밀번호</th>
       <td width="85%" class="inline">
        <input type="password" size=15 class="input-sm" name="pwd" id="pwd">
-       &nbsp;비밀번호 재입력:<input type="password" size=15 class="input-sm" id="pwd1">
+       &nbsp;재입력:<input type="password" size=15 class="input-sm" id="pwd1">
       </td>
      </tr>
      
@@ -130,8 +125,8 @@ $(function(){
   	   
   	   <tr>
 	     <th class="text-right" width="15%">전화번호</th>
-	     <td width="85%">
-	     	<select class="input-sm">
+	     <td width="85%" class="inline">
+	     	<select class="input-sm" name="phone1">
 	     	  <option>010</option>
 	     	  <option>011</option>
 	     	  <option>016</option>
@@ -177,7 +172,7 @@ $(function(){
 	      
 	      <tr>
 	      <td colspan="2">
-	      <input type="checkbox" class="agree1">&nbsp 이용약관 개인정보 수집 및 정보이용에 동의합니다.
+	      <input type="checkbox" class="agree1">&nbsp; 이용약관 개인정보 수집 및 정보이용에 동의합니다.
 	      </td>
 	      </tr>
 	      
@@ -193,29 +188,29 @@ $(function(){
 	     
 	     <tr>
 	      <td colspan="2">
-	      <input type="checkbox" class="agree2">&nbsp SMS 수신에 동의하시겠습니까?
+	      <input type="checkbox" class="agree2">&nbsp; SMS 수신에 동의하시겠습니까?
 	      </td>
 	      </tr>
 	      
 	      <tr>
 	      <td colspan="2">
-	      <input type="checkbox" class="agree3">&nbsp email 수신에 동의하시겠습니까?
+	      <input type="checkbox" class="agree3">&nbsp; email 수신에 동의하시겠습니까?
 	      </td>
 	      </tr>
 	      
-       <td colspan="2" class="text-center inline">
+	     <tr>
+       <td colspan="2" class="text-center inLine">
         <input type="submit" value="회원가입"
          class="btn-sm btn-info" id="joinBtn">
         <input type=button value="취소"
          class="btn-sm btn-warning"
-         onclick="javascript:history.back()"
-        >
-       </td>
-     </tr>
-    </table>
-    </form>
-   </div>
-  </main>
-</div>
-</body>
+         onclick="javascript:history.back()">
+         </td>
+         </tr>
+       </table>
+      </form>
+     </div>
+     </main>
+	</div>
+ </body>
 </html>
